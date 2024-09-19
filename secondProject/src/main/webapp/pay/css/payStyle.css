@@ -1,0 +1,64 @@
+@charset "UTF-8";
+
+
+
+
+#bbsList{
+
+margin: auto;
+}
+
+#bbsList_list img {
+  width: 210px;
+  height: 200px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out; /* 변환 효과를 부드럽게 만듭니다. */
+}
+
+#bbsList_list img:hover {
+  transform: translateY(-10px) scale(1.1); /* 마우스를 올릴 때 효과 적용 */
+}
+
+#bbsList_list a {
+  text-decoration: none;
+  color: #333;
+}
+
+#bbsList_list a:hover {
+  color: #ff6600;
+}
+
+#bbsList_list{
+	
+	background: transparent;
+	color:#fff;
+	border: 2px solid rgba(255,255,255,.2);
+	backdrop-filter: blur(20px);
+	box-shadow: 0 0 10px rgba(0,0,0,.2);
+	color: #fff;
+	border-radius: 10px;
+	padding: 30px 40px;
+	width: 134%;
+	
+}
+
+
+
+
+
+
+.topLine {
+   
+  width: 30%; 
+  border-top: 3px solid white;
+}
+
+
+
+
+.middleLine {
+  position: absolute; 
+  width: 30%;
+  border-top: 3px solid white;
+}

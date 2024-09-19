@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>secondProject</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+  </welcome-file-list>
+  
+  <!-- charset 필터
+  <filter>
+  	<filter-name>charsetFilter</filter-name>
+  	<filter-class>com.filter.EncodingFilter</filter-class>
+  	<init-param>
+  		<param-name>charset</param-name>
+  		<param-value>utf-8</param-value>
+  	</init-param>
+  </filter>
+  <filter-mapping>
+  	<filter-name>charsetFilter</filter-name>
+  	<url-pattern>/*</url-pattern>
+  </filter-mapping> -->
+
+  
+  
+  <!-- joden의 오두막2 솔 -->
+  <servlet>
+ 	<servlet-name>jodenServlet2</servlet-name>
+  	<servlet-class>com.myPage.MyServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>jodenServlet2</servlet-name>
+  	<!-- 로그인, 가입, 마이페이지 -->
+  	<url-pattern>/cabin/order/*</url-pattern>
+  </servlet-mapping>
+  
+  
+    <!-- joden의 오두막 지은 -->
+  <servlet>
+ 	<servlet-name>jodenServlet3</servlet-name>
+  	<servlet-class>com.product.ProductServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>jodenServlet3</servlet-name>
+  	<!-- 카테고리, 아이템별 -->
+  	<url-pattern>/cabin/shop/*</url-pattern>
+  </servlet-mapping>
+  
+  
+  <!-- joden의 오두막 세빈 -->
+  <servlet>
+ 	<servlet-name>jodenServlet</servlet-name>
+  	<servlet-class>com.member.MemServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>jodenServlet</servlet-name>
+  	<!-- 로그인, 가입, 마이페이지 -->
+  	<url-pattern>/cabin/membership/*</url-pattern>
+  	<!-- 결제 -->
+  	<url-pattern>/cabin/*</url-pattern>
+  </servlet-mapping>
+  
+    	<!-- joden의 오두막 경훈 -->
+  	<servlet>
+ 	<servlet-name>jodenPayServlet4</servlet-name>
+  	<servlet-class>com.pay.PayServlet</servlet-class>
+  	</servlet>
+ 	<servlet-mapping>
+  	<servlet-name>jodenPayServlet4</servlet-name>
+   	<url-pattern>/cabin/pay/*</url-pattern>
+  	</servlet-mapping>
+  
+  
+  <servlet>
+ 	<servlet-name>jodenServlet4444444</servlet-name>
+  	<servlet-class>com.product.ReviewServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>jodenServlet4444444</servlet-name>
+  	<!-- 카테고리, 아이템별 -->
+  	<url-pattern>/cabin/review/*</url-pattern>
+  </servlet-mapping>
+  
+  
+  <!-- 한글 깨짐 방지를 위한 필터 설정 -->
+  <filter>
+    <filter-name>SetCharEncoding</filter-name>
+    <filter-class>org.apache.catalina.filters.SetCharacterEncodingFilter</filter-class>
+      <init-param>
+        <param-name>encoding</param-name>
+        <param-value>UTF-8</param-value>
+      </init-param>
+  </filter>
+  <filter-mapping>
+    <filter-name>SetCharEncoding</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  
+</web-app>

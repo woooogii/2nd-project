@@ -1,0 +1,10 @@
+@charset "UTF-8";
+
+.layout {
+  display: flex;
+  gap: 60px;
+  margin: auto;
+  
+  color: grey;
+  
+}
