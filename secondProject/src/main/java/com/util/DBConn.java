@@ -9,9 +9,9 @@ public class DBConn {
 	
 	public static Connection getConnection() {
 		try {
-			String url = "jdbc:mysql://localhost:3306/test";  // MySQL URL
-			String user = "dev";  // MySQL 사용자 이름
-			String pwd = "a123";  // MySQL 비밀번호
+			String url = "jdbc:mysql://localhost:3306/database 이름";  // MySQL URL
+			String user = "사용자 이름";  // MySQL 사용자 이름
+			String pwd = "비밀번호";  // MySQL 비밀번호
 			
 			if(conn == null) {
 				Class.forName("com.mysql.cj.jdbc.Driver");  // MySQL 드라이버 클래스
